@@ -2,7 +2,7 @@ name: Maven_Build_Example
 env:
   JAVA_VERSION : "17"
   DISTRIBUTION : "zulu"
-  suiteXmlFile: "testSuites/tests.xml"
+  suiteXmlFile: "testsuites/advantageshop/All-Tests.xml"
   BROWSER: "CHROME-REMOTE"
   LOGIN: "${{ secrets.LOGIN }}"
   PASSWORD: "${{ secrets.PASSWORD }}"
