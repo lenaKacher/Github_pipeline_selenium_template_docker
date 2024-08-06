@@ -39,6 +39,12 @@ jobs:
       run:
         mvn clean test -DsuiteXmlFile="$suiteXmlFile" -Dbrowser="$BROWSER" -Durl="$URL" -Dlogin="$LOGIN" -Dpassword="$PASSWORD"
 
-    - name: Step 6 - Tear down Docker Compose services
+    - name: Step 6 - Save Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: github-actions-artifact
+        path: target/surefire-reports/TestReport.html
+
+    - name: Step 7 - Tear down Docker Compose services
       run:
         docker compose down
