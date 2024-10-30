@@ -40,7 +40,7 @@ jobs:
         mvn clean test -DsuiteXmlFile="$suiteXmlFile" -Dbrowser="$BROWSER" -Durl="$URL" -Dlogin="$LOGIN" -Dpassword="$PASSWORD"
 
     - name: Step 6 - Save Report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: github-actions-artifact
         path: target/surefire-reports/TestReport.html
